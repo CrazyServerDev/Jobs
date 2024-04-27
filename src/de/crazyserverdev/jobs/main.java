@@ -11,9 +11,9 @@ import de.crazyserverdev.jobs.mysql.getMYSQL;
 import net.milkbowl.vault.economy.Economy;
 
 
-public final class Main extends JavaPlugin {
+public final class main extends JavaPlugin {
 
-    public static Main insance;
+    public static main insance;
     public static Economy eco = null;
 
     @Override
@@ -69,7 +69,7 @@ public final class Main extends JavaPlugin {
       }
     
     
-    public static Main getInstance() {
+    public static main getInstance() {
         return insance;
     }
     

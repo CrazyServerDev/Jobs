@@ -1,6 +1,6 @@
 package de.crazyserverdev.jobs.configs;
 
-import de.crazyserverdev.jobs.Main;
+import de.crazyserverdev.jobs.main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -32,7 +32,7 @@ public class Jobs {
         try {
 
             Bukkit.getLogger().info("start2");
-            file = new File(Main.getInstance().getDataFolder(), "Jobs.yml");
+            file = new File(main.getInstance().getDataFolder(), "Jobs.yml");
             boolean created = true;
             if (!file.exists()) {
 
@@ -52,7 +52,7 @@ public class Jobs {
 
         try {
 
-            file = new File(Main.getInstance().getDataFolder(), "Jobs.yml");
+            file = new File(main.getInstance().getDataFolder(), "Jobs.yml");
 
 
 
@@ -84,7 +84,7 @@ public class Jobs {
         try {
             config.save(file);
         } catch (IOException e) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, (String) null, e);
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, (String) null, e);
         }
     }
 }

@@ -1,7 +1,7 @@
 name: Jobs
 author: CrazyServerDev
-version: 1.0
-main: de.crazyserverdev.jobs.Main
+version: 1.0.0
+main: de.crazyserverdev.jobs.main
 api-version: '1.20'
 
 commands:

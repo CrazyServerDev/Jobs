@@ -1,6 +1,6 @@
 package de.crazyserverdev.jobs.configs;
 
-import de.crazyserverdev.jobs.Main;
+import de.crazyserverdev.jobs.main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -38,7 +38,7 @@ public class MYSQLConfig {
 	      try {
 	        cfg.load(file);
 	      } catch (IOException|org.bukkit.configuration.InvalidConfigurationException ex) {
-	        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, (String)null, ex);
+	        Logger.getLogger(main.class.getName()).log(Level.SEVERE, (String)null, ex);
 	      } 
 	    } 
 	  }
@@ -47,7 +47,7 @@ public class MYSQLConfig {
 	    try {
 	      cfg.save(file);
 	    } catch (IOException e) {
-	      Logger.getLogger(Main.class.getName()).log(Level.SEVERE, (String)null, e);
+	      Logger.getLogger(main.class.getName()).log(Level.SEVERE, (String)null, e);
 	    } 
 	  }
 }
