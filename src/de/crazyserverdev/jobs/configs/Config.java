@@ -58,6 +58,7 @@ public class Config {
 
             Bukkit.getLogger().info("start5");
             config.set("MYSQL", false);
+            config.set("JobTypes.BlockBreakEvent", "BlockBreakEvent");
             config.set("MenuSettings.MainMenuName", "&aJobs Hauptmenü");
             config.set("MenuSettings.MainMenuBackgroundItemsMaterial", "GRAY_STAINED_GLASS_PANE");
 

@@ -57,6 +57,7 @@ public class Jobs {
 
 
             Bukkit.getLogger().info("start5");
+            config.set("Jobs.Menu.Miner.JobType", "BlockBreakEvent");
             config.set("Jobs.Menu.Miner.Prefix", "§9Miner");
             List<String> messages = config.getStringList("Jobs.Menu.Miner.Beschreibung");
             messages.add("&8######################################");

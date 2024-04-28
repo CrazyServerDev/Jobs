@@ -28,7 +28,7 @@ public class Menue {
     	
     	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.MainMenuBackgroundItemsMaterial")));
         ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName("§l");
+        itemMeta.setDisplayName(" §r");
         item.setItemMeta(itemMeta);
         inv.addItem(item);
     	for (int i = 0; i < 54; i++) {
