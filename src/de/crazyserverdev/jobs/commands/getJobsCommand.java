@@ -23,7 +23,7 @@ public class getJobsCommand implements CommandExecutor {
 
 
 
-        p.openInventory(Menue.defaultMenu(p));
+        p.openInventory(Menue.getMainMenu(p));
         return true;
         }
         else

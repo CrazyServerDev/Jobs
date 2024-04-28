@@ -67,11 +67,12 @@ public class Jobs {
             config.set("Jobs.Menu.Miner.Beschreibung", messages);
             config.set("Jobs.Menu.Miner.MenuSlot", 0);
             config.set("Jobs.Menu.Miner.MenuMaterials", "STONE");
-            config.set("Jobs.Miner.Ranks.1.Prefix", "&aMiner1");
-            config.set("Jobs.Miner.Ranks.1.XPForRank", 250);
-            config.set("Jobs.Miner.Ranks.1.RankXpMulti", 1.0);
-            config.set("Jobs.Miner.Ranks.1.RankMoneyMulti", 1.0);
-            config.set("Jobs.Miner.Ranks.1.Beschreibung", messages);
+            config.set("Jobs.Miner.Ranks.0.Prefix", "&aMiner1");
+            config.set("Jobs.Miner.Ranks.0.XPForRank", 0);
+            config.set("Jobs.Miner.Ranks.0.RankXpMulti", 1.0);
+            config.set("Jobs.Miner.Ranks.0.RankMoneyMulti", 1.0);
+            config.set("Jobs.Miner.Ranks.0.Beschreibung", messages);
+            
 
                save();
 

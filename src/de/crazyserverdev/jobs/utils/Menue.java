@@ -19,7 +19,7 @@ public class Menue {
 	
 
     public static Inventory inv;
-	public static Inventory defaultMenu(Player p) {
+	public static Inventory getMainMenu(Player p) {
 
     	Inventory inv = Bukkit.createInventory(null, 54 * 1, "§aJobs Hauptmenü");
     	
@@ -33,7 +33,6 @@ public class Menue {
     	for (int i = 0; i < 54; i++) {
             inv.setItem(i, item);
         }
-    	
     	
     	
     	 for (String key : Jobs.config.getConfigurationSection("Jobs.Menu").getKeys(false)) {
