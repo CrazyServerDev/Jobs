@@ -30,7 +30,6 @@ public final class main extends JavaPlugin {
         Bukkit.getLogger().info("uggggi");
         
         Config.loadFile();
-        Config.loadMessages();
         
         
         
@@ -42,7 +41,7 @@ public final class main extends JavaPlugin {
             getMYSQL.connect();
             getMYSQL.createTableBewerbungen();
             }
-            Bukkit.getConsoleSender().sendMessage("testmysql");
+            Bukkit.getConsoleSender().sendMessage("testmysql" + Config.config.getBoolean("MYSQL"));
           } 
         else
         {
