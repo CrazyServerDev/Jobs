@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import de.crazyserverdev.jobs.main;
+import de.crazyserverdev.jobs.configs.Config;
 import de.crazyserverdev.jobs.configs.Jobs;
 
 public class Menue {
@@ -21,7 +22,7 @@ public class Menue {
     public static Inventory inv;
 	public static Inventory getMainMenu(Player p) {
 
-    	Inventory inv = Bukkit.createInventory(null, 54 * 1, "§aJobs Hauptmenü");
+    	Inventory inv = Bukkit.createInventory(null, 54 * 1, ChatColor.translateAlternateColorCodes('&', Config.config.getString("MenuSettings.MainMenuName")));
     	
     	
     	

@@ -58,7 +58,7 @@ public class Config {
 
             Bukkit.getLogger().info("start5");
             config.set("MYSQL", false);
-            
+            config.set("MenuSettings.MainMenuName", "&aJobs Hauptmenü");
 
                save();
 
