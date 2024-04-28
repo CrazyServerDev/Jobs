@@ -1,6 +1,7 @@
 package de.crazyserverdev.jobs;
 
 import org.bukkit.Bukkit;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -8,6 +9,7 @@ import de.crazyserverdev.jobs.commands.getJobsCommand;
 import de.crazyserverdev.jobs.configs.Config;
 import de.crazyserverdev.jobs.configs.Jobs;
 import de.crazyserverdev.jobs.configs.MYSQLConfig;
+import de.crazyserverdev.jobs.events.getIventoryClickEvent;
 import de.crazyserverdev.jobs.mysql.getMYSQL;
 import net.milkbowl.vault.economy.Economy;
 
@@ -27,6 +29,9 @@ public final class main extends JavaPlugin {
         MYSQLConfig.loadConfig();
         MYSQLConfig.setupMessages();
         getCommand("jobs").setExecutor(new getJobsCommand());
+
+        
+        Bukkit.getServer().getPluginManager().registerEvents((Listener)new getIventoryClickEvent(), getInstance());
         Bukkit.getLogger().info("uggggi");
         
         Config.loadFile();
@@ -54,7 +59,10 @@ public final class main extends JavaPlugin {
 
     @Override
     public void onDisable() {
+    	if(Config.config.getBoolean("MYSQL"))
+    	{
     	getMYSQL.close();
+    	}
         // Plugin shutdown logic
     }
 
