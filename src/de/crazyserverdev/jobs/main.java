@@ -5,6 +5,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import de.crazyserverdev.jobs.commands.getJobsCommand;
+import de.crazyserverdev.jobs.configs.Config;
 import de.crazyserverdev.jobs.configs.Jobs;
 import de.crazyserverdev.jobs.configs.MYSQLConfig;
 import de.crazyserverdev.jobs.mysql.getMYSQL;
@@ -28,13 +29,19 @@ public final class main extends JavaPlugin {
         getCommand("jobs").setExecutor(new getJobsCommand());
         Bukkit.getLogger().info("uggggi");
         
+        Config.loadFile();
+        Config.loadMessages();
+        
         
         
         if (MYSQLConfig.file.exists()) {
             MYSQLConfig.loadConfig();
             MYSQLConfig.setupMessages();
+            if(Config.config.getBoolean("MYSQL"))
+            {
             getMYSQL.connect();
             getMYSQL.createTableBewerbungen();
+            }
             Bukkit.getConsoleSender().sendMessage("testmysql");
           } 
         else
