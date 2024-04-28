@@ -12,6 +12,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 
 import de.crazyserverdev.jobs.configs.Config;
 import de.crazyserverdev.jobs.configs.Jobs;
+import de.crazyserverdev.jobs.utils.Menue;
 
 public class getIventoryClickEvent implements Listener{
 	
@@ -54,12 +55,15 @@ public class getIventoryClickEvent implements Listener{
 					{
 						//links klick
 						p.sendMessage("Linksklick"+ e.getAction());
+						Menue.openJobKlick(p, "left", clickitename);						
+						
 					}
 					if(e.getAction() == InventoryAction.PICKUP_HALF)
 					{
 						//rechst klick
 
 						p.sendMessage("Rechstklick"+ e.getAction());
+						Menue.openJobKlick(p, "right", clickitename);			
 					}
 					 
 				 }

@@ -111,6 +111,22 @@ public class Menue {
 
 
 
+	public static void openJobKlick(Player p, String LeftOrRightClick, String JobName) {
+		
+		
+		
+		
+	}
+
+
+
+
+
+
+
+
+
+
 
 
 
