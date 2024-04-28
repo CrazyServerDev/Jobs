@@ -26,7 +26,7 @@ public class Menue {
     	
     	
     	
-    	ItemStack item = new ItemStack(Material.GRAY_STAINED_GLASS_PANE);
+    	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.MainMenuBackgroundItemsMaterial")));
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName("§l");
         item.setItemMeta(itemMeta);
