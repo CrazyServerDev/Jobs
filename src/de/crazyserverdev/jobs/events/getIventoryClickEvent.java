@@ -71,6 +71,27 @@ public class getIventoryClickEvent implements Listener{
 				 }
 				e.setCancelled(true);
 			 }
+			 else if(e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', Config.config.getString("MenuSettings.JobinformationMenu"))))
+			 {
+
+					p.sendMessage("ergebnis: " + e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', Config.config.getString("MenuSettings.JobinformationMenu"))));			 
+					
+					
+					//Job Information alle Blocke und preise laden
+					//Alle Ränge des Jobs
+					//xp und money bisher in dem job erfarmt
+					e.setCancelled(true);
+			 }
+			 else if(e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', Config.config.getString("MenuSettings.JobUpgradesMenu"))))
+			 {
+
+					p.sendMessage("ergebnis: " + e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', Config.config.getString("MenuSettings.JobUpgradesMenu"))));			 
+					
+					//Rang upgrade 
+					
+					e.setCancelled(true);
+			 }
+			 
 			 
 			 
 			 

@@ -61,6 +61,10 @@ public class Config {
             config.set("JobTypes.BlockBreakEvent", "BlockBreakEvent");
             config.set("MenuSettings.MainMenuName", "&aJobs Hauptmenü");
             config.set("MenuSettings.MainMenuBackgroundItemsMaterial", "GRAY_STAINED_GLASS_PANE");
+            config.set("MenuSettings.JobinformationMenu", "&e Job Information");
+            config.set("MenuSettings.JobinformationMenuBackgroundItemsMaterial", "YELLOW_STAINED_GLASS_PANE");
+            config.set("MenuSettings.JobUpgradesMenu", "&9 Job Upgrades");
+            config.set("MenuSettings.JobUpgradesMenuBackgroundItemsMaterial", "BLACK_STAINED_GLASS_PANE");
 
                save();
 

@@ -122,11 +122,11 @@ public class Menue {
 			
 			
 			
-			Inventory inv = Bukkit.createInventory(null, 54 * 1, ChatColor.translateAlternateColorCodes('&', Jobs.config.getString("Jobs.Menu." + job + ".Prefix") + "&e Job Infosrmation"));
+			Inventory inv = Bukkit.createInventory(null, 54 * 1, ChatColor.translateAlternateColorCodes('&', Jobs.config.getString("Jobs.Menu." + job + ".Prefix") + Config.config.getString("MenuSettings.JobinformationMenu")));
 	    	
 	    	
 	    	
-	    	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.MainMenuBackgroundItemsMaterial")));
+	    	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.JobinformationMenuBackgroundItemsMaterial")));
 	        ItemMeta itemMeta = item.getItemMeta();
 	        itemMeta.setDisplayName(" §r");
 	        item.setItemMeta(itemMeta);
@@ -145,6 +145,31 @@ public class Menue {
 		}
 		else if(LeftOrRightClick.equalsIgnoreCase("right"))
 		{
+			
+			
+			
+p.sendMessage(job);
+			
+			
+			
+			Inventory inv = Bukkit.createInventory(null, 54 * 1, ChatColor.translateAlternateColorCodes('&', Jobs.config.getString("Jobs.Menu." + job + ".Prefix") + Config.config.getString("MenuSettings.JobUpgradesMenu")));
+	    	
+	    	
+	    	
+	    	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.JobUpgradesMenuBackgroundItemsMaterial")));
+	        ItemMeta itemMeta = item.getItemMeta();
+	        itemMeta.setDisplayName(" §r");
+	        item.setItemMeta(itemMeta);
+	        inv.addItem(item);
+	    	for (int i = 0; i < 54; i++) {
+	            inv.setItem(i, item);
+	        }
+	    	
+			
+			p.openInventory(inv);
+			
+			
+			
 			
 		}
 		else
