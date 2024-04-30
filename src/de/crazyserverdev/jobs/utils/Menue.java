@@ -113,6 +113,44 @@ public class Menue {
 
 	public static void openJobKlick(Player p, String LeftOrRightClick, String JobName) {
 		
+		String job = JobName;
+		
+		if(LeftOrRightClick.equalsIgnoreCase("left"))
+		{
+			
+			p.sendMessage(job);
+			
+			
+			
+			Inventory inv = Bukkit.createInventory(null, 54 * 1, ChatColor.translateAlternateColorCodes('&', Jobs.config.getString("Jobs.Menu." + job + ".Prefix") + "&e Job Infosrmation"));
+	    	
+	    	
+	    	
+	    	ItemStack item = new ItemStack(Material.getMaterial(Config.config.getString("MenuSettings.MainMenuBackgroundItemsMaterial")));
+	        ItemMeta itemMeta = item.getItemMeta();
+	        itemMeta.setDisplayName(" §r");
+	        item.setItemMeta(itemMeta);
+	        inv.addItem(item);
+	    	for (int i = 0; i < 54; i++) {
+	            inv.setItem(i, item);
+	        }
+	    	
+			
+			p.openInventory(inv);
+			
+			
+			
+			
+			
+		}
+		else if(LeftOrRightClick.equalsIgnoreCase("right"))
+		{
+			
+		}
+		else
+		{
+			p.sendMessage("kein klick ausgewählt");
+		}
 		
 		
 		
